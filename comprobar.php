@@ -55,7 +55,11 @@ if(!$resul){
 
 echo "Se encontraron ".mysqli_num_rows($resul)." registros.<br>";
 
-if (mysqli_num_rows($resul) == 0) {echo "<br><b>Usuario y/o clave incorrectos!.<br></b>\n";}
+if (mysqli_num_rows($resul) == 0) {
+	echo "<br><b>Usuario y/o clave incorrectos!.<br></b>\n";
+	//si no encuentra el usuario crea un botón para darse de alta en la base de datos
+	echo "<br><a href='altas.html'><button class='btn btn-secondary'>Ir a ALTAS</button></a>";
+}
 else
 {
 echo "<br>REGISTROS ENCONTRADOS:<br>\n";
